@@ -56,13 +56,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyAlignments(modifier: Modifier = Modifier) {
-    Column(
+    Row(
         modifier = Modifier
             .background(Color.White)
             .fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
             text = "Hello",
