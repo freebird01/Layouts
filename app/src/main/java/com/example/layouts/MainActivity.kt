@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -56,11 +57,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyAlignments(modifier: Modifier = Modifier) {
-    Box(
+    Column(
         modifier = Modifier
             .background(Color.White)
             .fillMaxSize(),
-        contentAlignment = Alignment.Center
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = "Hello",
@@ -71,8 +73,11 @@ fun MyAlignments(modifier: Modifier = Modifier) {
             textAlign = TextAlign.Center,
             modifier = modifier
                 .background(color = Color.Red)
-                .width(100.dp)
+                .padding(start = 20.dp, end = 30.dp)
         )
+
+        Spacer(modifier.size(20.dp))
+
         Text(
             text = "Android",
             color = Color.White,
@@ -84,6 +89,9 @@ fun MyAlignments(modifier: Modifier = Modifier) {
                 .background(color = Color.Red)
                 .width(100.dp)
         )
+
+        Spacer(modifier.size(20.dp))
+
         Text(
             text = "Kotlin",
             color = Color.White,
